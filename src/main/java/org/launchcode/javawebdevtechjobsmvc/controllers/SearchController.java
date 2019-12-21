@@ -26,12 +26,11 @@ public class SearchController {
 
     // TODO #3 - Create a handler to process a search request and render the updated search view.
 
-    @RequestMapping(value = "/results") // delete parameter?
+    @RequestMapping(value = "results")
     public String displaySearchResults(Model model, @RequestParam String searchType,
                                                     @RequestParam String searchTerm){
 
         ArrayList<Job> jobs;
-
 //        if (searchTerm.equals("all") || searchTerm == null){
 //            jobs = JobData.findAll();
 //        } else {
@@ -39,8 +38,8 @@ public class SearchController {
 //        model.addAttribute("title", "Jobs with " + ListController.columnChoices.get(searchType) + ": " + searchTerm);
 //        }
         model.addAttribute("jobs", jobs);
-        model.addAttribute("columns", columnChoices);
-        return "/search/results"; // add search/ to return or redirect: ?
+//        model.addAttribute("columns", columnChoices);
+        return "list-jobs";
     }
 
 
