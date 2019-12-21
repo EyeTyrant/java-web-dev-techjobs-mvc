@@ -6,28 +6,31 @@
 
 <div th:replace="fragments :: page-header"></div>
 
-<div class="container body-content">
 
-    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+<div th:replace="fragments :: results-table"></div>
 
-    <!-- TODO #1 - Use a loop to display job results in a table. -->
+<!--<div class="container body-content">-->
 
-    <table class="job-listing">
-        <th:block th:each="item : ${jobs}">
-            <tr>
-                <td>
-                    <p th:text="'ID: '+${item.id}"></p>
-                    <p th:text="'Name: '+${item.name}"></p>
-                    <p th:text="'Employer: '+${item.employer}"></p>
-                    <p th:text="'Location: '+${item.location}"></p>
-                    <p th:text="'Position Type: '+${item.positionType}"></p>
-                    <p th:text="'Skill: '+${item.coreCompetency}"></p>
-                </td>
-            </tr>
-        </th:block>
-    </table>
+<!--    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>-->
 
-</div>
+<!--    &lt;!&ndash; TODO #1 - Use a loop to display job results in a table. &ndash;&gt;-->
+
+<!--    <table class="job-listing">-->
+<!--        <th:block th:each="item : ${jobs}">-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <p th:text="'ID: '+${item.id}"></p>-->
+<!--                    <p th:text="'Name: '+${item.name}"></p>-->
+<!--                    <p th:text="'Employer: '+${item.employer}"></p>-->
+<!--                    <p th:text="'Location: '+${item.location}"></p>-->
+<!--                    <p th:text="'Position Type: '+${item.positionType}"></p>-->
+<!--                    <p th:text="'Skill: '+${item.coreCompetency}"></p>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        </th:block>-->
+<!--    </table>-->
+
+<!--</div>-->
 
 </body>
 </html>
