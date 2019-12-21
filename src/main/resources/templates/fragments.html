@@ -69,10 +69,14 @@
                         <td>
                             <p th:text="'ID: '+${item.id}"></p>
                             <p th:text="'Name: '+${item.name}"></p>
-                            <p th:text="'Employer: '+${item.employer}"></p>
-                            <p th:text="'Location: '+${item.location}"></p>
-                            <p th:text="'Position Type: '+${item.positionType}"></p>
-                            <p th:text="'Skill: '+${item.coreCompetency}"></p>
+<!--                            <p th:text="'Employer: '+${item.employer}"></p>-->
+                            <p>Employer: <a th:href="@{/search/results(searchType=${'employer'},searchTerm=${item.employer})}" th:text="${item.employer}"></a></p>
+<!--                            <p th:text="'Location: '+${item.location}"></p>-->
+                            <p>Location: <a th:href="@{/search/results(searchType=${'location'},searchTerm=${item.location})}" th:text="${item.location}"></a></p>
+<!--                            <p th:text="'Position Type: '+${item.positionType}"></p>-->
+                            <p>Position Type: <a th:href="@{/search/results(searchType=${'positionType'},searchTerm=${item.positionType})}" th:text="${item.positionType}"></a></p>
+<!--                            <p th:text="'Skill: '+${item.coreCompetency}"></p>-->
+                            <p>Skill: <a th:href="@{/search/results(searchType=${'coreCompetency'},searchTerm=${item.coreCompetency})}" th:text="${item.coreCompetency}"></a></p>
                         </td>
                     </tr>
                 </th:block>
