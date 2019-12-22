@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
 
+<!--Head Fragment-->
+
 <head th:fragment="head">
 
     <!-- Bootstrap stylesheets and script -->
@@ -12,6 +14,8 @@
 </head>
 
 <body>
+
+<!--Page Header Fragment-->
 
     <div th:fragment="page-header" class="navbar navbar-light navbar-fixed-top" th:style="'background-color:#e3f2fd;color:#2929ff;font-size:20px;'">
         <div class="container">
@@ -27,6 +31,7 @@
         </div>
     </div>
 
+<!--Search Form Fragment-->
 
     <div th:fragment="search-form" class="container text-center">
         <h1 th:text="${#strings.capitalizeWords(title)}" th:style="'color:#2929ff;'"></h1>
@@ -56,6 +61,8 @@
         </form>
     </div>
 
+<!--Results Table Fragment-->
+
     <div th:fragment="results-table" class="container">
         <div class="container body-content">
 
@@ -69,13 +76,13 @@
                         <td>
                             <p th:text="'ID: '+${item.id}"></p>
                             <p th:text="'Name: '+${item.name}"></p>
-<!--                            <p th:text="'Employer: '+${item.employer}"></p>-->
+                            <!--<p th:text="'Employer: '+${item.employer}"></p>-->
                             <p>Employer: <a th:href="@{/search/results(searchType=${'employer'},searchTerm=${item.employer})}" th:text="${item.employer}"></a></p>
-<!--                            <p th:text="'Location: '+${item.location}"></p>-->
+                            <!--<p th:text="'Location: '+${item.location}"></p>-->
                             <p>Location: <a th:href="@{/search/results(searchType=${'location'},searchTerm=${item.location})}" th:text="${item.location}"></a></p>
-<!--                            <p th:text="'Position Type: '+${item.positionType}"></p>-->
+                            <!--<p th:text="'Position Type: '+${item.positionType}"></p>-->
                             <p>Position Type: <a th:href="@{/search/results(searchType=${'positionType'},searchTerm=${item.positionType})}" th:text="${item.positionType}"></a></p>
-<!--                            <p th:text="'Skill: '+${item.coreCompetency}"></p>-->
+                            <!--<p th:text="'Skill: '+${item.coreCompetency}"></p>-->
                             <p>Skill: <a th:href="@{/search/results(searchType=${'coreCompetency'},searchTerm=${item.coreCompetency})}" th:text="${item.coreCompetency}"></a></p>
                         </td>
                     </tr>
