@@ -28,10 +28,10 @@
     </div>
 
 
-    <div th:fragment="search-form" class="container">
-        <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <div th:fragment="search-form" class="container text-center">
+        <h1 th:text="${#strings.capitalizeWords(title)}" th:style="${columns} ?'color:#2929ff;'"></h1>
 
-        <form th:action="@{/search/results}" method = "post">
+        <form th:action="@{/search/results}" method = "post" th:style="${columns} ?'color:#2929ff;font-size:18px;'">
             <h2>Search by:</h2>
 
             <p>
@@ -59,11 +59,11 @@
     <div th:fragment="results-table" class="container">
         <div class="container body-content">
 
-            <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+            <h1 class="text-center" th:text="${#strings.capitalizeWords(title)}" th:style="${columns} ?'color:#2929ff;font-size:45px;'"></h1>
 
             <!-- TODO #1 - Use a loop to display job results in a table. -->
 
-            <table class="job-listing">
+            <table class="job-listing" th:style="${columns} ?'color:#2929ff;font-size:18px;'">
                 <th:block th:each="item : ${jobs}">
                     <tr>
                         <td>
