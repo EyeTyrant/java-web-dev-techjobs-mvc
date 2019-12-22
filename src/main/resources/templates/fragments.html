@@ -13,15 +13,15 @@
 
 <body>
 
-    <div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
+    <div th:fragment="page-header" class="navbar navbar-light navbar-fixed-top" th:style="'background-color:#e3f2fd;color:#2929ff;font-size:20px;'">
         <div class="container">
             <div class="navbar-header">
-                <a th:href="@{/}" class="navbar-brand">TechJobs</a>
+                <a th:href="@{/}" class="navbar-brand" th:style="'color:#2929ff;font-size:25px;'">TechJobs</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a th:href="@{/search}">Search</a></li>
-                    <li><a th:href="@{/list}">List</a></li>
+                    <li><a th:href="@{/search}" th:style="'color:#2929ff;'">Search</a></li>
+                    <li><a th:href="@{/list}" th:style="'color:#2929ff;'">List</a></li>
                 </ul>
             </div>
         </div>
@@ -29,9 +29,9 @@
 
 
     <div th:fragment="search-form" class="container text-center">
-        <h1 th:text="${#strings.capitalizeWords(title)}" th:style="${columns} ?'color:#2929ff;'"></h1>
+        <h1 th:text="${#strings.capitalizeWords(title)}" th:style="'color:#2929ff;'"></h1>
 
-        <form th:action="@{/search/results}" method = "post" th:style="${columns} ?'color:#2929ff;font-size:18px;'">
+        <form th:action="@{/search/results}" method = "post" th:style="'color:#2929ff;font-size:18px;'">
             <h2>Search by:</h2>
 
             <p>
@@ -59,11 +59,11 @@
     <div th:fragment="results-table" class="container">
         <div class="container body-content">
 
-            <h1 class="text-center" th:text="${#strings.capitalizeWords(title)}" th:style="${columns} ?'color:#2929ff;font-size:45px;'"></h1>
+            <h1 class="text-center" th:text="${#strings.capitalizeWords(title)}" th:style="'color:#2929ff;font-size:45px;'"></h1>
 
             <!-- TODO #1 - Use a loop to display job results in a table. -->
 
-            <table class="job-listing" th:style="${columns} ?'color:#2929ff;font-size:18px;'">
+            <table class="job-listing" th:style="'color:#2929ff;font-size:18px;'">
                 <th:block th:each="item : ${jobs}">
                     <tr>
                         <td>
