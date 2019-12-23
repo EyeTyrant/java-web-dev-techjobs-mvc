@@ -5,10 +5,12 @@ import java.util.HashMap;
 
 
 public class TechJobsController {
+  static HashMap<String, String> actionChoices = new HashMap<>();
   static HashMap<String, String> columnChoices = new HashMap<>();
-  static HashMap<String, String> actionChoices;
 
   public TechJobsController() {
+    actionChoices.put("search", "Search");
+    actionChoices.put("list", "List");
 
     columnChoices.put("all", "All");
     columnChoices.put("employer", "Employer");
@@ -16,8 +18,6 @@ public class TechJobsController {
     columnChoices.put("positionType", "Position Type");
     columnChoices.put("coreCompetency", "Skill");
 
-    actionChoices.put("search", "Search");
-    actionChoices.put("list", "List");
   }
 
   @ModelAttribute("actions")
