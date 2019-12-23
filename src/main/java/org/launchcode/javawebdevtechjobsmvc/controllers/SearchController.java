@@ -2,16 +2,11 @@ package org.launchcode.javawebdevtechjobsmvc.controllers;
 
 import org.launchcode.javawebdevtechjobsmvc.models.Job;
 import org.launchcode.javawebdevtechjobsmvc.models.JobData;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.ArrayList;
-
-//import static org.launchcode.javawebdevtechjobsmvc.controllers.ListController.columnChoices;
-import static org.launchcode.javawebdevtechjobsmvc.controllers.TechJobsController.columnChoices;
 
 /**
  * Created by LaunchCode
