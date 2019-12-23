@@ -15,7 +15,7 @@
 
 <body>
 
-<!--Page Header Fragment-->
+<!--Page Header / Navigation Bar Fragment-->
 
     <div th:fragment="page-header" class="navbar navbar-light navbar-fixed-top" th:style="'background-color:#e3f2fd;color:#2929ff;font-size:20px;'">
         <div class="container">
@@ -28,6 +28,19 @@
                     <li><a th:href="@{/list}" th:style="'color:#2929ff;'">List</a></li>
                 </ul>
             </div>
+        </div>
+    </div>
+
+<!--Index Page Content(links)-->
+
+    <div th:fragment="index-page">
+        <div th:style="'color:#2929ff;'" class="container body-content">
+            <h2>View jobs by:</h2>
+            <ul>
+                <li th:each="action : ${actions}" th:style="'color:#2929ff;font-size:18px;'">
+                    <a th:href="@{'/' + ${action.key}}" th:text="${action.value}"></a>
+                </li>
+            </ul>
         </div>
     </div>
 

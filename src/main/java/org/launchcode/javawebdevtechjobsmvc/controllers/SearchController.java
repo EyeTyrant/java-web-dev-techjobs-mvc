@@ -4,10 +4,10 @@ import org.launchcode.javawebdevtechjobsmvc.models.Job;
 import org.launchcode.javawebdevtechjobsmvc.models.JobData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.launchcode.javawebdevtechjobsmvc.controllers.ListController.columnChoices;
 
@@ -28,7 +28,7 @@ public class SearchController {
 
     @RequestMapping(value = "results")
     public String displaySearchResults(Model model, @RequestParam String searchType,
-                                                    @RequestParam String searchTerm){
+                                       @RequestParam String searchTerm){
 
         ArrayList<Job> jobs;
 //        if (searchTerm.equals("all") || searchTerm == null){
