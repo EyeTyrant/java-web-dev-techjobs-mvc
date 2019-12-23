@@ -16,7 +16,6 @@ public class TechJobsController {
     columnChoices.put("location", "Location");
     columnChoices.put("positionType", "Position Type");
     columnChoices.put("coreCompetency", "Skill");
-
   }
 
   @ModelAttribute("actions")
